@@ -1,0 +1,347 @@
+/* =============================================================
+   PLANNER DIGITAL CAPIVARAS KAWAII
+   Design: contemporary Japanese kawaii — "Capivara no Onsen"
+   Paleta: Creme papel, Caramelo capivara, Verde sálvia, Rosa chá,
+           Azul lagoa, Amarelo manteiga, Marrom cacau
+   Tipografia: Nunito (ExtraBold títulos, Regular corpo)
+   ============================================================= */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Paleta Capivara */
+  --capivara-creme: #FFF7EA;
+  --capivara-caramelo: #A96F45;
+  --capivara-cacau: #5B3A29;
+  --capivara-verde: #BFD8B8;
+  --capivara-rosa: #F4B7C3;
+  --capivara-azul: #B9DDE7;
+  --capivara-amarelo: #F7D98B;
+  --capivara-verde-escuro: #7BA87A;
+  --capivara-rosa-escuro: #E8899A;
+  --capivara-azul-escuro: #7BB8C8;
+}
+
+:root {
+  --radius: 1rem;
+  --background: #FFF7EA;
+  --foreground: #5B3A29;
+  --card: #FFFBF3;
+  --card-foreground: #5B3A29;
+  --popover: #FFFBF3;
+  --popover-foreground: #5B3A29;
+  --primary: #A96F45;
+  --primary-foreground: #FFF7EA;
+  --secondary: #BFD8B8;
+  --secondary-foreground: #3D5C3A;
+  --muted: #F5EDE0;
+  --muted-foreground: #8B6347;
+  --accent: #F4B7C3;
+  --accent-foreground: #7A2D3E;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: #E8D5C0;
+  --input: #F0E4D0;
+  --ring: #A96F45;
+  --chart-1: #A96F45;
+  --chart-2: #BFD8B8;
+  --chart-3: #F4B7C3;
+  --chart-4: #B9DDE7;
+  --chart-5: #F7D98B;
+  --sidebar: #FFFBF3;
+  --sidebar-foreground: #5B3A29;
+  --sidebar-primary: #A96F45;
+  --sidebar-primary-foreground: #FFF7EA;
+  --sidebar-accent: #F5EDE0;
+  --sidebar-accent-foreground: #5B3A29;
+  --sidebar-border: #E8D5C0;
+  --sidebar-ring: #A96F45;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Planner page styles */
+  .planner-page {
+    background: #FFF7EA;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .planner-card {
+    background: #FFFBF3;
+    border: 2px solid #E8D5C0;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 16px rgba(169, 111, 69, 0.10);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .planner-card:hover {
+    box-shadow: 0 8px 28px rgba(169, 111, 69, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .tab-btn {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    padding: 0.75rem 0.35rem;
+    border-radius: 0.75rem 0 0 0.75rem;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    border: 2px solid transparent;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover {
+    filter: brightness(0.92);
+    transform: rotate(180deg) translateX(3px);
+  }
+
+  .tab-btn.active {
+    filter: brightness(0.88);
+    border-color: #5B3A29;
+  }
+
+  .dotted-line {
+    border-bottom: 1.5px dotted #D4B896;
+    margin: 0.5rem 0;
+  }
+
+  .ruled-line {
+    border-bottom: 1px solid #E8D5C0;
+    margin: 0.6rem 0;
+  }
+
+  .section-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #5B3A29;
+    letter-spacing: -0.01em;
+  }
+
+  .field-label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #8B6347;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .washi-tape {
+    height: 18px;
+    border-radius: 3px;
+    opacity: 0.75;
+    transform: rotate(-1.5deg);
+    display: inline-block;
+  }
+
+  .nav-btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: #A96F45;
+    color: #FFF7EA;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s ease, transform 0.12s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: none;
+  }
+
+  .nav-btn:hover {
+    background: #8B5A35;
+    transform: scale(1.04);
+  }
+
+  .nav-btn-outline {
+    background: transparent;
+    color: #A96F45;
+    border: 2px solid #A96F45;
+  }
+
+  .nav-btn-outline:hover {
+    background: #A96F45;
+    color: #FFF7EA;
+  }
+
+  .progress-bar {
+    height: 10px;
+    border-radius: 999px;
+    background: #E8D5C0;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #A96F45, #C4854A);
+    transition: width 0.4s ease;
+  }
+
+  .mood-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 2px solid #E8D5C0;
+    background: #FFFBF3;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .mood-btn:hover, .mood-btn.selected {
+    border-color: #A96F45;
+    background: #F5EDE0;
+    transform: scale(1.15);
+  }
+
+  .star-rating {
+    color: #F7D98B;
+    font-size: 1.1rem;
+  }
+
+  .habit-check {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 0.35rem;
+    border: 2px solid #D4B896;
+    background: #FFFBF3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .habit-check.checked {
+    background: #A96F45;
+    border-color: #A96F45;
+    color: white;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.25s ease forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .float-anim {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Print / PDF styles */
+  @media print {
+    .no-print { display: none !important; }
+    .planner-page { min-height: auto; }
+    .tab-sidebar { display: none !important; }
+  }
+}
