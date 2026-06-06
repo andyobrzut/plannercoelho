@@ -6,14 +6,14 @@
 import { useLocation } from "wouter";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_banner_indice-UT9sLJx9Gr9AJAPFnJ68Wk.webp";
-const CAPIVARA_CAPA = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_capa-Fd6ZXFoFukpCfvRVwidW5H.webp";
+const CAPIVARA_BANNER = "/assets/kawaii/kawaii_banner.png";
+const CAPIVARA_CAPA = "/assets/kawaii/kawaii_capa.png";
 
 const sections = [
   {
     title: "Yearly Overview",
     emoji: "📅",
-    desc: "Calendar completo, datas importantes, goals anuais e sua palavra do ano",
+    desc: "Full calendar, important dates, yearly goals, and your word of the year",
     path: "/planner-anual",
     color: "#F7D98B",
     textColor: "#5B3A29",
@@ -67,7 +67,7 @@ const sections = [
   {
     title: "Finance Tracker",
     emoji: "💰",
-    desc: "Income, expenses, budget estudantil e financial goals pessoais",
+    desc: "Income, expenses, student budget, and personal financial goals",
     path: "/financeiro",
     color: "#B9DDE7",
     textColor: "#2A5A6A",
@@ -76,7 +76,7 @@ const sections = [
   {
     title: "Health & Wellness",
     emoji: "🌿",
-    desc: "Sleep, hydration, exercise, humor, self-care and mental balance",
+    desc: "Sleep, hydration, exercise, mood, self-care, and mental balance",
     path: "/saude",
     color: "#F4B7C3",
     textColor: "#7A2D3E",
@@ -213,7 +213,7 @@ export default function Indice() {
       <div style={{ maxWidth: 900, margin: "1.5rem auto 2rem", padding: "0 1.5rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
           <div style={{ width: 4, height: 28, background: "#A96F45", borderRadius: 4 }} />
-          <h2 className="section-title" style={{ fontSize: "1.4rem" }}>Index do Planner</h2>
+          <h2 className="section-title" style={{ fontSize: "1.4rem" }}>Planner Index</h2>
           <div style={{ flex: 1, height: 2, background: "#E8D5C0", borderRadius: 2 }} />
         </div>
 

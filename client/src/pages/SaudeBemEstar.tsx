@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_SAUDE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_saude-jqwgmRXA6jCcLu59ZnzgwP.webp";
+const CAPIVARA_SAUDE = "/assets/kawaii/kawaii_saude.png";
 
 const diasSemana = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 

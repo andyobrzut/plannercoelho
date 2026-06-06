@@ -1,5 +1,5 @@
 /* =============================================================
-   PÁGINA: Planner Acadêmico — Planner Digital Capivaras Kawaii
+   PÁGINA: Planner Acadêmico — Planner Digital Bunnys Kawaii
    ============================================================= */
 
 import { useState } from "react";
@@ -101,7 +101,7 @@ export default function PlannerAcademico() {
       <div style={{ background: "#A96F45", borderBottom: "3px solid #7A4E30", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_PROVAS} alt="Capivara estudando" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_PROVAS} alt="Bunny estudando" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#FFF7EA" }}>🎓 Planner Acadêmico</h1>
               <p style={{ color: "#F5EDE0", fontSize: "0.85rem", fontWeight: 600 }}>Organize suas disciplinas, notas e prazos</p>

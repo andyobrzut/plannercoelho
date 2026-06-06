@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_METAS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_metas-ndFMbpPvHwFjdRPbs2V5MN.webp";
+const CAPIVARA_METAS = "/assets/kawaii/kawaii_metas.png";
 
 const categorias = ["📚 Studies","💼 Career","💰 Finance","🌿 Health","👨‍👩‍👧 Family","❤️ Relationships","🎨 Hobbies","✈️ Travel"];
 

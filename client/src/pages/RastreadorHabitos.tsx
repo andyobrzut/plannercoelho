@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_HABITOS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_habitos-94Qi24efaka5SFCFsdTQvW.webp";
+const CAPIVARA_HABITOS = "/assets/kawaii/kawaii_habitos.png";
 
 const dias31 = Array.from({ length: 31 }, (_, i) => i + 1);
 

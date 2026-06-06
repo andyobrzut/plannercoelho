@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_NOTAS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_notas-NB52h3su2WreJdNqVZ5Kru.webp";
+const CAPIVARA_NOTAS = "/assets/kawaii/kawaii_notas.png";
 
 interface Step {
   titulo: string;
@@ -109,7 +109,7 @@ export default function Projects() {
       <div style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_NOTAS} alt="Bunny projetos" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_NOTAS} alt="Bunny projects" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#3D5C3A" }}>🚀 Project Management</h1>
               <p style={{ color: "#5A7A58", fontSize: "0.85rem", fontWeight: 600 }}>Planeje, execute e acompanhe seus projetos</p>

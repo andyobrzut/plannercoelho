@@ -1,5 +1,5 @@
 /* =============================================================
-   PÁGINA: Gestão de Projetos — Planner Digital Capivaras Kawaii
+   PÁGINA: Gestão de Projetos — Planner Digital Bunnys Kawaii
    ============================================================= */
 
 import { useState } from "react";
@@ -110,7 +110,7 @@ export default function Projetos() {
       <div style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_NOTAS} alt="Capivara projetos" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_NOTAS} alt="Bunny projetos" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#3D5C3A" }}>🚀 Gestão de Projetos</h1>
               <p style={{ color: "#5A7A58", fontSize: "0.85rem", fontWeight: 600 }}>Planeje, execute e acompanhe seus projetos</p>

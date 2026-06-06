@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_PROVAS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_provas-oVXdQD8H2jxJvCs5zYsMrJ.webp";
+const CAPIVARA_PROVAS = "/assets/kawaii/kawaii_provas.png";
 
 interface Subject {
   nome: string;

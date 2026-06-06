@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import TabSidebar from "@/components/TabSidebar";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
-const CAPIVARA_CALENDARIO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_calendario-TreJP7jEzziAkX5ttWoppX.webp";
+const CAPIVARA_CALENDARIO = "/assets/kawaii/kawaii_calendario.png";
 
 const meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
 const diasSemana = ["D","S","T","Q","Q","S","S"];

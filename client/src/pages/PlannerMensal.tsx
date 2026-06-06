@@ -1,5 +1,5 @@
 /* =============================================================
-   PÁGINA: Planner Mensal — Planner Digital Capivaras Kawaii
+   PÁGINA: Planner Mensal — Planner Digital Bunnys Kawaii
    ============================================================= */
 
 import { useLocation } from "wouter";
@@ -96,7 +96,7 @@ export default function PlannerMensal() {
       <div style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_CALENDARIO} alt="Capivara calendário" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_CALENDARIO} alt="Bunny calendário" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#3D5C3A" }}>🗓️ Planner Mensal</h1>
               <p style={{ color: "#5A7A58", fontSize: "0.85rem", fontWeight: 600 }}>Organize seu mês com foco e tranquilidade</p>

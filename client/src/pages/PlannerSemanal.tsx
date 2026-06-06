@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_HABITOS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663716557953/QNuvBQx5RXonKQaFGDZUsN/capivara_habitos-94Qi24efaka5SFCFsdTQvW.webp";
+const CAPIVARA_HABITOS = "/assets/kawaii/kawaii_habitos.png";
 
 const dias = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
@@ -48,7 +48,7 @@ export default function PlannerSemanal() {
       <div style={{ background: "#B9DDE7", borderBottom: "3px solid #7BB8C8", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_HABITOS} alt="Bunny planejando" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_HABITOS} alt="Bunny planning" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#2A5A6A" }}>📋 Weekly Planner</h1>
               <p style={{ color: "#3A7A8A", fontSize: "0.85rem", fontWeight: 600 }}>Organize sua semana com clareza e foco</p>

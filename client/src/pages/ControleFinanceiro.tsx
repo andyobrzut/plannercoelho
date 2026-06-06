@@ -1,5 +1,5 @@
 /* =============================================================
-   PÁGINA: Controle Financeiro — Planner Digital Capivaras Kawaii
+   PÁGINA: Controle Financeiro — Planner Digital Bunnys Kawaii
    ============================================================= */
 
 import { useLocation } from "wouter";
@@ -65,7 +65,7 @@ export default function ControleFinanceiro() {
       <div style={{ background: "#B9DDE7", borderBottom: "3px solid #7BB8C8", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <img src={CAPIVARA_FINANCAS} alt="Capivara finanças" style={{ width: 60, height: 60, objectFit: "contain" }} />
+            <img src={CAPIVARA_FINANCAS} alt="Bunny finanças" style={{ width: 60, height: 60, objectFit: "contain" }} />
             <div>
               <h1 className="section-title" style={{ fontSize: "1.5rem", color: "#2A5A6A" }}>💰 Controle Financeiro</h1>
               <p style={{ color: "#3A7A8A", fontSize: "0.85rem", fontWeight: 600 }}>Cuide do seu dinheiro com carinho e organização</p>
