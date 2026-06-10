@@ -27,6 +27,7 @@ body { font-size: 16px; }
 /* Make the landing page feel like the Cosmic structure while preserving theme art */
 .planner-page img { max-width: 100%; }
 .planner-page img[style*="height: 160px"] { height: 240px !important; object-fit: cover !important; }
+.planner-page .planner-hero-banner { object-position: center bottom !important; }
 .planner-page [style*="max-width: 900"] { max-width: 1120px !important; }
 .planner-page [style*="minmax(260px"] { grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)) !important; gap: 1.1rem !important; }
 .planner-page [style*="font-size: 0.75rem"] { font-size: .86rem !important; }
@@ -50,6 +51,7 @@ body { font-size: 16px; }
   .section-title { font-size: clamp(1.5rem, 8vw, 2rem) !important; overflow-wrap: anywhere; }
   .planner-page p { font-size: .92rem; }
   .planner-page img[style*="height: 160px"] { height: 210px !important; }
+  .planner-page .planner-hero-banner { object-position: 28% bottom !important; }
   .planner-page [style*="padding: 0 1.5rem"] { padding-left: 12px !important; padding-right: 12px !important; }
   .planner-page [style*="padding: 2rem"] { padding: 1.35rem 1rem !important; }
   .planner-page [style*="minmax(260px"] { grid-template-columns: 1fr !important; }
