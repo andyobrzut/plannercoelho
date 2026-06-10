@@ -129,6 +129,7 @@ export default function Indice() {
 
       {/* Header decorativo */}
       <div
+        className="planner-home-header"
         style={{
           background: "linear-gradient(135deg, #FFF7EA 0%, #F5EDE0 50%, #FFF0D8 100%)",
           borderBottom: "3px solid #E8D5C0",
@@ -144,7 +145,7 @@ export default function Indice() {
         <div style={{ position: "absolute", top: 15, right: 200, fontSize: "1rem", opacity: 0.25 }}>💕</div>
         <div style={{ position: "absolute", bottom: 8, right: 100, fontSize: "1.3rem", opacity: 0.2 }}>🌿</div>
 
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", gap: "2rem" }}>
+        <div className="planner-home-header-content" style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", gap: "2rem" }}>
           <img
             src={CAPIVARA_CAPA}
             alt="Bunny studying"
@@ -204,6 +205,7 @@ export default function Indice() {
           <img
             src={CAPIVARA_BANNER}
             alt="Kawaii bunnies"
+            loading="eager"
             className="planner-hero-banner"
             style={{ width: "100%", height: 160, objectFit: "cover", objectPosition: "center bottom" }}
           />
