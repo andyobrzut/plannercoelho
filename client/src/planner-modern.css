@@ -1,0 +1,78 @@
+/* Modern responsive structure shared by the themed planners */
+html, body, #root, .planner-page { max-width: 100%; overflow-x: hidden; }
+body { font-size: 16px; }
+.planner-page { min-height: 100vh; padding-left: 130px !important; }
+.planner-page::before { opacity: .035 !important; }
+.planner-page > div:not(.tab-sidebar) { max-width: 100%; }
+.planner-card { border-radius: 18px !important; box-shadow: 0 8px 24px rgba(89,74,78,.10) !important; transition: transform .2s, box-shadow .2s; }
+.planner-card:hover { transform: translateY(-3px); box-shadow: 0 13px 30px rgba(89,74,78,.16) !important; }
+.section-title { font-size: clamp(1.65rem, 3vw, 2.35rem) !important; line-height: 1.15 !important; }
+.field-label, label { font-size: .88rem !important; line-height: 1.4; }
+.planner-page p, .planner-page li, .planner-page td, .planner-page th, .planner-page span { line-height: 1.45; }
+.planner-page p { font-size: .95rem; }
+.planner-page input, .planner-page select, .planner-page textarea { min-height: 44px; font-size: .95rem !important; border-radius: 10px !important; }
+.planner-page textarea { min-height: 90px; }
+.planner-page button { min-height: 42px; font-size: .9rem; }
+.nav-btn { min-height: 44px; font-size: .92rem !important; padding: .6rem 1rem !important; }
+.habit-check { width: 1.8rem !important; height: 1.8rem !important; }
+.mood-btn { width: 2.65rem !important; height: 2.65rem !important; }
+.progress-bar { height: 12px !important; }
+
+.tab-sidebar { position: fixed !important; left: 0 !important; right: auto !important; top: 50% !important; transform: translateY(-50%) !important; width: 122px; display: flex !important; flex-direction: column !important; gap: 5px !important; z-index: 100; }
+.tab-btn { writing-mode: horizontal-tb !important; transform: none !important; width: 116px; min-height: 46px; padding: .45rem .65rem !important; border: 0 !important; border-radius: 0 12px 12px 0 !important; display: flex; align-items: center; gap: .5rem; color: #594A4E !important; font-size: .78rem !important; font-weight: 900 !important; letter-spacing: 0 !important; opacity: .82; box-shadow: 0 3px 10px rgba(89,74,78,.12); }
+.tab-btn:hover { transform: translateX(4px) !important; opacity: 1; filter: brightness(1.02); }
+.tab-btn.active { width: 122px; opacity: 1; border: 2px solid #fff !important; box-shadow: 0 6px 15px rgba(89,74,78,.2); }
+.tab-icon { width: 20px; height: 20px; display: grid; place-items: center; flex: 0 0 auto; }
+
+/* Make the landing page feel like the Cosmic structure while preserving theme art */
+.planner-page img { max-width: 100%; }
+.planner-page img[style*="height: 160px"] { height: 240px !important; object-fit: cover !important; }
+.planner-page [style*="max-width: 900"] { max-width: 1120px !important; }
+.planner-page [style*="minmax(260px"] { grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)) !important; gap: 1.1rem !important; }
+.planner-page [style*="font-size: 0.75rem"] { font-size: .86rem !important; }
+.planner-page [style*="font-size: 0.78rem"] { font-size: .88rem !important; }
+.planner-page [style*="font-size: 0.82rem"] { font-size: .92rem !important; }
+.planner-page [style*="font-size: 0.9rem"] { font-size: 1rem !important; }
+.planner-page table { font-size: .9rem; }
+
+@media (max-width: 900px) {
+  .planner-page { padding-left: 94px !important; }
+  .tab-sidebar { width: 88px; }
+  .tab-btn, .tab-btn.active { width: 84px; padding: .4rem !important; flex-direction: column; gap: 1px; font-size: .68rem !important; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .planner-page { padding-left: 0 !important; padding-bottom: 84px !important; }
+  .tab-sidebar { top: auto !important; bottom: 0 !important; left: 0 !important; width: 100% !important; transform: none !important; flex-direction: row !important; gap: 4px !important; padding: 7px !important; overflow-x: auto; background: rgba(255,255,255,.97); border-top: 1px solid var(--border); box-shadow: 0 -5px 18px rgba(89,74,78,.12); }
+  .tab-btn, .tab-btn.active { min-width: 76px; width: 76px; min-height: 66px; border-radius: 12px !important; flex-direction: column; justify-content: center; gap: 2px; padding: .35rem !important; font-size: .68rem !important; }
+  .tab-btn:hover { transform: none !important; }
+  .section-title { font-size: clamp(1.5rem, 8vw, 2rem) !important; overflow-wrap: anywhere; }
+  .planner-page p { font-size: .92rem; }
+  .planner-page img[style*="height: 160px"] { height: 210px !important; }
+  .planner-page [style*="padding: 0 1.5rem"] { padding-left: 12px !important; padding-right: 12px !important; }
+  .planner-page [style*="padding: 2rem"] { padding: 1.35rem 1rem !important; }
+  .planner-page [style*="minmax(260px"] { grid-template-columns: 1fr !important; }
+  .planner-card { padding: 1rem !important; }
+  .planner-page table { min-width: 760px; }
+  .planner-page:has(table) { overflow-x: auto; }
+  .planner-page input, .planner-page select, .planner-page textarea, .planner-page button { font-size: 1rem !important; }
+  .planner-page [style*="max-width: 900"][style*="display: flex"] {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  .planner-page [style*="max-width: 900"][style*="display: flex"] > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .planner-page h1, .planner-page h2, .planner-page p {
+    max-width: 100%;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+  .planner-page [style*="display: flex"][style*="flex-wrap: wrap"] { max-width: 100%; }
+}
