@@ -6,7 +6,7 @@
 import { useLocation } from "wouter";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_BANNER = "/assets/kawaii/kawaii_banner.png";
+const CAPIVARA_BANNER = "/assets/kawaii/kawaii_capa.png";
 const CAPIVARA_CAPA = "/assets/kawaii/kawaii_capa.png";
 
 const sections = [

@@ -1,59 +1,28 @@
-/* =============================================================
-   COMPONENTE: TabSidebar
-   Design: Japanese kawaii — colorful side navigation tabs
-   ============================================================= */
-
 import { useLocation } from "wouter";
+import { BookOpen, CalendarDays, CalendarRange, CircleDollarSign, CloudSun, FolderKanban, Heart, Home, Lightbulb, ListChecks, NotebookPen, Sparkles, Target } from "lucide-react";
 
 const tabs = [
-  { label: "Home", path: "/", color: "#A96F45", textColor: "#FFF7EA" },
-  { label: "Yearly", path: "/planner-anual", color: "#F7D98B", textColor: "#5B3A29" },
-  { label: "Monthly", path: "/planner-mensal", color: "#BFD8B8", textColor: "#3D5C3A" },
-  { label: "Weekly", path: "/planner-semanal", color: "#B9DDE7", textColor: "#2A5A6A" },
-  { label: "Daily", path: "/planner-diario", color: "#F4B7C3", textColor: "#7A2D3E" },
-  { label: "Goals", path: "/goals-objetivos", color: "#F7D98B", textColor: "#5B3A29" },
-  { label: "Habits", path: "/habitos", color: "#BFD8B8", textColor: "#3D5C3A" },
-  { label: "Finance", path: "/financeiro", color: "#B9DDE7", textColor: "#2A5A6A" },
-  { label: "Health", path: "/saude", color: "#F4B7C3", textColor: "#7A2D3E" },
-  { label: "Academic", path: "/academico", color: "#A96F45", textColor: "#FFF7EA" },
-  { label: "Class Notes", path: "/anotacoes-aulas", color: "#F7D98B", textColor: "#5B3A29" },
-  { label: "Projects", path: "/projetos", color: "#BFD8B8", textColor: "#3D5C3A" },
-  { label: "Notes", path: "/notes", color: "#F4B7C3", textColor: "#7A2D3E" },
+  { label: "Home", icon: Home, path: "/", color: "#FF8BA7" },
+  { label: "Year", icon: CalendarRange, path: "/planner-anual", color: "#FFF4BD" },
+  { label: "Month", icon: CalendarDays, path: "/planner-mensal", color: "#C3F0CA" },
+  { label: "Week", icon: ListChecks, path: "/planner-semanal", color: "#BDE0FE" },
+  { label: "Day", icon: CloudSun, path: "/planner-diario", color: "#FFC2D1" },
+  { label: "Goals", icon: Target, path: "/metas-objetivos", color: "#FFF4BD" },
+  { label: "Habits", icon: Sparkles, path: "/habitos", color: "#C3F0CA" },
+  { label: "Finances", icon: CircleDollarSign, path: "/financeiro", color: "#BDE0FE" },
+  { label: "Wellness", icon: Heart, path: "/saude", color: "#FFC2D1" },
+  { label: "Studies", icon: BookOpen, path: "/academico", color: "#FF8BA7" },
+  { label: "Classes", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
+  { label: "Projects", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
+  { label: "Ideas", icon: Lightbulb, path: "/notas", color: "#FFC2D1" },
 ];
 
 export default function TabSidebar() {
   const [location, navigate] = useLocation();
-
-  return (
-    <div
-      className="tab-sidebar no-print"
-      style={{
-        position: "fixed",
-        right: 0,
-        top: "50%",
-        transform: "translateY(-50%)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "3px",
-        zIndex: 100,
-      }}
-    >
-      {tabs.map((tab) => (
-        <button
-          key={tab.path}
-          className="tab-btn"
-          style={{
-            background: tab.color,
-            color: tab.textColor,
-            opacity: location === tab.path ? 1 : 0.75,
-            borderLeft: location === tab.path ? `3px solid ${tab.textColor}` : "3px solid transparent",
-          }}
-          onClick={() => navigate(tab.path)}
-          title={tab.label}
-        >
-          {tab.label}
-        </button>
-      ))}
-    </div>
-  );
+  return <nav className="tab-sidebar no-print" aria-label="Planner navigation">
+    {tabs.map(tab => {
+      const Icon = tab.icon;
+      return <button key={tab.path} className={`tab-btn ${location === tab.path ? "active" : ""}`} style={{ background: tab.color }} onClick={() => navigate(tab.path)} title={tab.label}><span className="tab-icon"><Icon size={18}/></span><span>{tab.label}</span></button>;
+    })}
+  </nav>;
 }
