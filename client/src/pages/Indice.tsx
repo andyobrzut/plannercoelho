@@ -6,7 +6,7 @@
 import { useLocation } from "wouter";
 import TabSidebar from "@/components/TabSidebar";
 
-const CAPIVARA_BANNER = "/assets/kawaii/kawaii_capa.png";
+const CAPIVARA_BANNER = "/assets/kawaii/kawaii_banner.png";
 const CAPIVARA_CAPA = "/assets/kawaii/kawaii_capa.png";
 
 const sections = [
@@ -204,7 +204,8 @@ export default function Indice() {
           <img
             src={CAPIVARA_BANNER}
             alt="Kawaii bunnies"
-            style={{ width: "100%", height: 160, objectFit: "cover", objectPosition: "center 30%" }}
+            className="planner-hero-banner"
+            style={{ width: "100%", height: 160, objectFit: "cover", objectPosition: "center bottom" }}
           />
         </div>
       </div>
