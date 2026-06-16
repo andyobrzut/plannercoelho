@@ -24,7 +24,7 @@ import Notes from "./pages/Notas";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Indice} />
       <Route path="/planner-anual" component={PlannerAnual} />
       <Route path="/planner-mensal" component={PlannerMensal} />
       <Route path="/planner-semanal" component={PlannerSemanal} />
@@ -34,7 +34,7 @@ function Router() {
       <Route path="/habitos" component={RastreadorHabitos} />
       <Route path="/financeiro" component={ControleFinance} />
       <Route path="/saude" component={SaudeGoodEstar} />
-      <Route path="/academico" component={PlannerAcademico} />
+      <Route path="/ademico" component={PlannerAcademico} />
       <Route path="/anotacoes-aulas" component={AnotacoesClassNotes} />
       <Route path="/projetos" component={Projects} />
       <Route path="/ideas" component={Notas} />
@@ -44,7 +44,6 @@ function Router() {
     </Switch>
   );
 }
-
 function App() {
   return (
     <ErrorBoundary>
