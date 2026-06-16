@@ -37,7 +37,7 @@ function Router() {
       <Route path="/ademico" component={PlannerAcademico} />
       <Route path="/anotacoes-aulas" component={AnotacoesClassNotes} />
       <Route path="/projetos" component={Projects} />
-      <Route path="/ideas" component={Notas} />
+      <Route path="/ideas" component={Notes} />
       <Route path="/notas" component={Notes} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
