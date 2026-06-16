@@ -24,7 +24,7 @@ import Notes from "./pages/Notas";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Indice} />
+      <Route path="/" component={Home} />
       <Route path="/planner-anual" component={PlannerAnual} />
       <Route path="/planner-mensal" component={PlannerMensal} />
       <Route path="/planner-semanal" component={PlannerSemanal} />
