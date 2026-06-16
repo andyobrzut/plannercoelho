@@ -1,7 +1,20 @@
-import { useLocation } from "wouter";
-import { BookOpen, CalendarDays, CalendarRange, CircleDollarSign, CloudSun, FolderKanban, Heart, Home, Lightbulb, ListChecks, NotebookPen, Sparkles, Target } from "lucide-react";
+import { 
+  Home, 
+  CalendarRange, 
+  CalendarDays, 
+  ListChecks, 
+  CloudSun, 
+  Target, 
+  Sparkles, 
+  CircleDollarSign, 
+  Heart, 
+  BookOpen, 
+  NotebookPen, 
+  FolderKanban, 
+  Lightbulb 
+} from "lucide-react";
 
-const tabs = [
+export const tabs = [
   { label: "Home", icon: Home, path: "/", color: "#FF8BA7" },
   { label: "Year", icon: CalendarRange, path: "/planner-anual", color: "#FFF4BD" },
   { label: "Month", icon: CalendarDays, path: "/planner-mensal", color: "#C3F0CA" },
@@ -14,7 +27,8 @@ const tabs = [
   { label: "Studies", icon: BookOpen, path: "/academico", color: "#FF8BA7" },
   { label: "Classes", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
   { label: "Projects", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
-  { label: "Ideas", icon: Lightbulb, path: "/ideas", color: "#FFC2D1" },
+  { label: "Ideas", icon: Lightbulb, path: "/ideas", color: "#FFC2D1" }
+];
 
 export default function TabSidebar() {
   const [location, navigate] = useLocation();
