@@ -29,6 +29,8 @@ function Router() {
       <Route path="/planner-mensal" component={PlannerMensal} />
       <Route path="/planner-semanal" component={PlannerSemanal} />
       <Route path="/planner-diario" component={PlannerDiario} />
+      <Route path="/goals-objetivos" component={MetasObjetivos} />
+      <Route path="/goals" component={MetasObjetivos} />
       <Route path="/metas-objetivos" component={MetasObjetivos} />
       <Route path="/habitos" component={RastreadorHabitos} />
       <Route path="/financeiro" component={ControleFinanceiro} />
@@ -36,6 +38,8 @@ function Router() {
       <Route path="/academico" component={PlannerAcademico} />
       <Route path="/anotacoes-aulas" component={AnotacoesAulas} />
       <Route path="/projetos" component={Projetos} />
+      <Route path="/notes" component={Notas} />
+      <Route path="/ideas" component={Notas} />
       <Route path="/notas" component={Notas} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
