@@ -7,13 +7,13 @@ const tabs = [
   { label: "Month", icon: CalendarDays, path: "/planner-mensal", color: "#C3F0CA" },
   { label: "Week", icon: ListChecks, path: "/planner-semanal", color: "#BDE0FE" },
   { label: "Day", icon: CloudSun, path: "/planner-diario", color: "#FFC2D1" },
-  { label: "Goals", icon: Target, path: "/goals-objetivos", color: "#FFF4BD" },
+  { label: "Goals", icon: Target, path: "/goals", color: "#FFF4BD" },
   { label: "Habits", icon: Sparkles, path: "/habitos", color: "#C3F0CA" },
   { label: "Finances", icon: CircleDollarSign, path: "/financeiro", color: "#BDE0FE" },
   { label: "Wellness", icon: Heart, path: "/saude", color: "#FFC2D1" },
   { label: "Studies", icon: BookOpen, path: "/academico", color: "#FF8BA7" },
   { label: "Classes", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
-  { label: "Projects", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
+  { label: "Ideas", icon: Lightbulb, path: "/ideas", color: "#FFC2D1" },
   { label: "Ideas", icon: Lightbulb, path: "/notes", color: "#FFC2D1" },
 ];
 
