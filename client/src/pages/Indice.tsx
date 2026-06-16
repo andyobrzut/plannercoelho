@@ -165,7 +165,7 @@ export default function Indice() {
               className="section-title"
               style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", lineHeight: 1.15, marginBottom: "0.5rem" }}
             >
-              Meu Planner Kawaii 🍓
+              Meu Planner Kawaii 2026-2027 🍓
             </h1>
             <p style={{ color: "#8B6347", fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>
               Seu espaço fofo para organizar estudos, rotina e vida!

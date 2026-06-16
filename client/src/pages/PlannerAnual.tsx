@@ -51,7 +51,7 @@ function MiniCalendario({ mes, ano }: { mes: number; ano: number }) {
 
 export default function PlannerAnual() {
   const [, navigate] = useLocation();
-  const ano = new Date().getFullYear();
+  const [ano, setAno] = useLocalStorage("planner_anual_ano", 2026);
   
   // Todos os estados usam localStorage para persistência automática
   const [datasImportantes, setDatasImportantes] = useLocalStorage('planner_anual_datas', [
@@ -81,13 +81,14 @@ export default function PlannerAnual() {
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <img src={CAPIVARA_CALENDARIO} alt="Coelhinho calendário" style={{ width: 64, height: 64, objectFit: "contain" }} />
             <div>
-              <h1 className="section-title" style={{ fontSize: "1.6rem", color: "#5B3A29" }}>📅 Visão Anual {ano}</h1>
+              <h1 className="section-title" style={{ fontSize: "1.6rem", color: "#5B3A29" }}>📅 Visão Anual 2026-2027</h1>
               <p style={{ color: "#8B6347", fontSize: "0.85rem", fontWeight: 600 }}>Calendário completo, datas importantes e metas do ano</p>
             </div>
           </div>
-          <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/")}>
-            ← Índice
-          </button>
+          <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
+            {[2026, 2027].map(year => <button key={year} className={ano === year ? "nav-btn" : "nav-btn nav-btn-outline"} onClick={() => setAno(year)}>{year}</button>)}
+            <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/")}>← Índice</button>
+          </div>
         </div>
       </div>
 
@@ -230,9 +231,10 @@ export default function PlannerAnual() {
 
         {/* Navegação */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/")}>
-            ← Índice
-          </button>
+          <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
+            {[2026, 2027].map(year => <button key={year} className={ano === year ? "nav-btn" : "nav-btn nav-btn-outline"} onClick={() => setAno(year)}>{year}</button>)}
+            <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/")}>← Índice</button>
+          </div>
           <button className="nav-btn" onClick={() => navigate("/planner-mensal")}>
             Planner Mensal →
           </button>

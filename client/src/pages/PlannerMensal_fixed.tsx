@@ -27,7 +27,8 @@ export default function PlannerMensal() {
   
   // Todos os estados usam localStorage para persistência automática
   const [mesAtual, setMesAtual] = useLocalStorage('planner_mensal_mes', hoje.getMonth());
-  const [anoAtual, setAnoAtual] = useLocalStorage('planner_mensal_ano', hoje.getFullYear());
+  const initialYear = Math.min(2027, Math.max(2026, hoje.getFullYear()));
+  const [anoAtual, setAnoAtual] = useLocalStorage('planner_mensal_ano', initialYear);
   const [notas, setNotas] = useLocalStorage<Record<number, string>>('planner_mensal_notas', {});
   const [metasMes, setMetasMes] = useLocalStorage<string[]>('planner_mensal_metas', ["","","",""]);
   const [prioridades, setPrioridades] = useLocalStorage<string[]>('planner_mensal_prioridades', ["","",""]);
@@ -47,6 +48,7 @@ export default function PlannerMensal() {
     let a = anoAtual;
     if (m < 0) { m = 11; a--; }
     if (m > 11) { m = 0; a++; }
+    if (a < 2026 || a > 2027) return;
     setMesAtual(m);
     setAnoAtual(a);
   };
