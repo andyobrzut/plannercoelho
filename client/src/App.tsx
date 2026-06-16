@@ -29,14 +29,17 @@ function Router() {
       <Route path="/planner-mensal" component={PlannerMensal} />
       <Route path="/planner-semanal" component={PlannerSemanal} />
       <Route path="/planner-diario" component={PlannerDiario} />
+      <Route path="/goals-objetivos" component={GoalsObjectives} />
       <Route path="/goals" component={GoalsObjectives} />
       <Route path="/metas-objetivos" component={GoalsObjectives} />
       <Route path="/habitos" component={RastreadorHabitos} />
       <Route path="/financeiro" component={ControleFinance} />
       <Route path="/saude" component={SaudeGoodEstar} />
+      <Route path="/academico" component={PlannerAcademico} />
       <Route path="/ademico" component={PlannerAcademico} />
       <Route path="/anotacoes-aulas" component={AnotacoesClassNotes} />
       <Route path="/projetos" component={Projects} />
+      <Route path="/notes" component={Notes} />
       <Route path="/ideas" component={Notes} />
       <Route path="/notas" component={Notes} />
       <Route path="/404" component={NotFound} />
