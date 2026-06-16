@@ -345,3 +345,29 @@
     .tab-sidebar { display: none !important; }
   }
 }
+/* --- FORÇAR RESPONSIVIDADE EM TODOS OS PLANNERS (BASE IGUAL) --- */
+@media (max-width: 768px) {
+  /* Aplica-se a qualquer div que tenha maxWidth ou max-width igual a 1000 */
+  div[style*="maxWidth: 1000"],
+  div[style*="max-width: 1000"],
+  div[style*="maxWidth:1000"],
+  div[style*="max-width:1000"] {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    padding: 0 1rem !important;
+    display: flex !important;
+  }
+
+  /* Força todas as barras laterais de largura 200 a ficarem a 100% no telemóvel */
+  div[style*="width: 200"],
+  div[style*="width:200"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Força a área de conteúdo da direita (último filho) a ficar a 100% */
+  div[style*="1000"] > div:last-child {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
