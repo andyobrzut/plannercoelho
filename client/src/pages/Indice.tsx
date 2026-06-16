@@ -1,5 +1,5 @@
 /* =============================================================
-   PAGE: Index — Digital Kawaii Bunny Planner
+   PAGE: Index — Digital Kawaii Bunny Planner 2026-2027
    Design: Japanese kawaii — cover with navigation cards
    ============================================================= */
 
@@ -165,7 +165,7 @@ export default function Indice() {
               className="section-title"
               style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", lineHeight: 1.15, marginBottom: "0.5rem" }}
             >
-              Bunny Planner
+              Bunny Planner 2026-2027
             </h1>
             <p style={{ color: "#8B6347", fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>
               Your cute space to organize studies, routine, and life!
