@@ -13,9 +13,8 @@ const tabs = [
   { label: "Wellness", icon: Heart, path: "/saude", color: "#FFC2D1" },
   { label: "Studies", icon: BookOpen, path: "/academico", color: "#FF8BA7" },
   { label: "Classes", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
+  { label: "Projects", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
   { label: "Ideas", icon: Lightbulb, path: "/ideas", color: "#FFC2D1" },
-  { label: "Ideas", icon: Lightbulb, path: "/notes", color: "#FFC2D1" },
-];
 
 export default function TabSidebar() {
   const [location, navigate] = useLocation();
