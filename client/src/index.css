@@ -371,3 +371,70 @@
     max-width: 100% !important;
   }
 }
+
+/* Ajustes finais para Coelho PT: impedir vazamento horizontal no celular. */
+@media (max-width: 768px) {
+  html,
+  body,
+  #root,
+  .planner-page {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .planner-page {
+    box-sizing: border-box;
+    padding-bottom: 96px !important;
+  }
+
+  .planner-page *,
+  .planner-page *::before,
+  .planner-page *::after {
+    box-sizing: border-box;
+  }
+
+  .planner-page > div:not(.tab-sidebar),
+  .planner-page main,
+  .planner-page section,
+  .planner-page .planner-card {
+    max-width: 100% !important;
+  }
+
+  .planner-page div[style*="max-width: 900"],
+  .planner-page div[style*="maxWidth: 900"],
+  .planner-page div[style*="max-width: 1000"],
+  .planner-page div[style*="maxWidth: 1000"],
+  .planner-page div[style*="max-width: 1100"],
+  .planner-page div[style*="maxWidth: 1100"] {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .planner-page div[style*="grid-template-columns: 1fr 280px"],
+  .planner-page div[style*="grid-template-columns: 1fr 1.5fr"],
+  .planner-page div[style*="grid-template-columns: 1fr 1fr"],
+  .planner-page div[style*="grid-template-columns: 120px 1fr 1fr"],
+  .planner-page div[style*="grid-template-columns: 1fr 160px 120px"],
+  .planner-page div[style*="grid-template-columns: 1fr 120px 100px 100px"] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+  }
+
+  .planner-page div[style*="display: flex"][style*="gap: 1.25rem"],
+  .planner-page div[style*="display: flex"][style*="justify-content: space-between"] {
+    flex-wrap: wrap !important;
+  }
+
+  .planner-page input,
+  .planner-page select,
+  .planner-page textarea,
+  .planner-page button {
+    max-width: 100% !important;
+  }
+
+  .planner-page .nav-btn {
+    white-space: normal !important;
+  }
+}
