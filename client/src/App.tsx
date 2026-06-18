@@ -22,6 +22,8 @@ import Projetos from "./pages/Projetos_fixed";
 import Notas from "./pages/Notas";
 import Extras from "./pages/Extras";
 import Historico from "./pages/Historico";
+import AdminCodigos from "./pages/AdminCodigos";
+import ActivationGate from "./components/ActivationGate";
 
 function Router() {
   return (
@@ -45,6 +47,8 @@ function Router() {
       <Route path="/notas" component={Notas} />
       <Route path="/extras" component={Extras} />
       <Route path="/historico" component={Historico} />
+      <Route path="/painel-codigos" component={AdminCodigos} />
+      <Route path="/admin-codigos" component={AdminCodigos} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -57,7 +61,9 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <ActivationGate>
+            <Router />
+          </ActivationGate>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

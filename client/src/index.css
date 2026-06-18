@@ -681,3 +681,126 @@
     padding: 0 1rem;
   }
 }
+
+.activation-page,
+.admin-page {
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  background: #fff7ea;
+}
+
+.activation-panel,
+.admin-shell {
+  width: min(960px, 100%);
+  border: 2px solid #e8d5c0;
+  border-radius: 1.25rem;
+  background: #fffbf3;
+  box-shadow: 0 18px 42px rgba(91, 58, 41, .14);
+  overflow: hidden;
+}
+
+.activation-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, .9fr) minmax(300px, 1fr);
+}
+
+.activation-art {
+  min-height: 420px;
+  background: url("/assets/kawaii/kawaii_banner.png") center / cover no-repeat;
+}
+
+.activation-content,
+.admin-card {
+  padding: 2rem;
+}
+
+.activation-badge {
+  display: inline-flex;
+  border-radius: 999px;
+  background: #ffc2d1;
+  color: #7a2d3e;
+  padding: .25rem .8rem;
+  font: 900 .75rem 'Nunito', sans-serif;
+  letter-spacing: .08em;
+}
+
+.activation-content h1,
+.admin-page h1 {
+  margin: .75rem 0 .5rem;
+  color: #5b3a29;
+  font: 900 2rem 'Nunito', sans-serif;
+}
+
+.activation-content p,
+.activation-content small,
+.admin-page p {
+  color: #8b6347;
+  font-weight: 700;
+}
+
+.activation-content form,
+.admin-card,
+.admin-form {
+  display: grid;
+  gap: .9rem;
+}
+
+.activation-content label,
+.admin-card label {
+  display: grid;
+  gap: .35rem;
+  color: #5b3a29;
+  font-weight: 900;
+}
+
+.activation-content input,
+.admin-card input {
+  width: 100%;
+  border: 2px solid #e8d5c0;
+  border-radius: .8rem;
+  background: #fff7ea;
+  color: #5b3a29;
+  padding: .75rem .9rem;
+  font: 900 .95rem 'Nunito', sans-serif;
+}
+
+.activation-content button,
+.admin-card button {
+  border: 0;
+  border-radius: .8rem;
+  background: #b64655;
+  color: #fffaf4;
+  padding: .8rem 1rem;
+  cursor: pointer;
+  font: 900 .95rem 'Nunito', sans-serif;
+}
+
+.activation-message,
+.admin-message {
+  border-radius: .75rem;
+  padding: .75rem;
+  background: #f7dfe4;
+  color: #7a2d3e !important;
+}
+
+@media (max-width: 760px) {
+  .activation-page,
+  .admin-page {
+    padding: 1rem;
+  }
+
+  .activation-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .activation-art {
+    min-height: 180px;
+  }
+
+  .activation-content,
+  .admin-card {
+    padding: 1.25rem;
+  }
+}
