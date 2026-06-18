@@ -20,6 +20,8 @@ import PlannerAcademico from "./pages/PlannerAcademico_fixed";
 import AnotacoesAulas from "./pages/AnotacoesAulas";
 import Projetos from "./pages/Projetos_fixed";
 import Notas from "./pages/Notas";
+import Extras from "./pages/Extras";
+import Historico from "./pages/Historico";
 
 function Router() {
   return (
@@ -41,6 +43,8 @@ function Router() {
       <Route path="/notes" component={Notas} />
       <Route path="/ideas" component={Notas} />
       <Route path="/notas" component={Notas} />
+      <Route path="/extras" component={Extras} />
+      <Route path="/historico" component={Historico} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

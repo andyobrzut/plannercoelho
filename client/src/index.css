@@ -373,6 +373,192 @@
 }
 
 /* Ajustes finais para Coelho PT: impedir vazamento horizontal no celular. */
+.rabbit-extra-header,
+.history-hero {
+  align-items: center;
+  background: linear-gradient(135deg, #FFE5EC 0%, #FFF5F7 52%, #FFF4BD 100%);
+  border-bottom: 3px solid #FFD1DC;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+}
+
+.rabbit-extra-header > div,
+.history-hero > div {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.rabbit-extra-header > div > span {
+  background: #FFF7EA;
+  border: 2px solid #FFD1DC;
+  border-radius: 999px;
+  color: #A96F45;
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 900;
+  padding: 0.55rem 0.75rem;
+}
+
+.history-hero img {
+  border: 2px solid #FFD1DC;
+  border-radius: 14px;
+  height: 64px;
+  object-fit: cover;
+  width: 76px;
+}
+
+.rabbit-extra-header p,
+.rabbit-extra-editor > p,
+.rabbit-extra-editor label,
+.history-hero p,
+.history-message,
+.backup-card p,
+.history-item p,
+.history-item span,
+.history-empty span {
+  color: #8B6347;
+  font-weight: 700;
+}
+
+.rabbit-extra-shell {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 260px minmax(0, 1fr);
+  margin: 1.5rem auto 2rem;
+  max-width: 1120px;
+  padding: 0 1.5rem;
+}
+
+.rabbit-extra-menu {
+  align-content: start;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rabbit-extra-menu input,
+.rabbit-extra-menu button,
+.rabbit-extra-editor input,
+.rabbit-extra-editor textarea,
+.history-save-card input {
+  background: #FFFBF3;
+  border: 2px solid #E8D5C0;
+  border-radius: 12px;
+  color: #5B3A29;
+  font-family: Nunito, sans-serif;
+  font-weight: 800;
+  width: 100%;
+}
+
+.rabbit-extra-menu input,
+.rabbit-extra-editor input,
+.rabbit-extra-editor textarea,
+.history-save-card input {
+  padding: 0.75rem;
+}
+
+.rabbit-extra-menu button {
+  align-items: center;
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: 30px 1fr;
+  padding: 0.7rem;
+  text-align: left;
+}
+
+.rabbit-extra-menu button b {
+  color: #A96F45;
+  font-size: 0.72rem;
+}
+
+.rabbit-extra-menu button.active {
+  background: #FFF4BD;
+  border-color: #E8C95E;
+}
+
+.rabbit-extra-editor {
+  min-height: 680px;
+  padding: 1.6rem !important;
+}
+
+.rabbit-extra-form-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 180px;
+}
+
+.planner-bottom-nav {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+
+.history-content {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 1050px;
+  padding: 0 1.5rem;
+}
+
+.history-save-card,
+.backup-card,
+.history-item {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.3rem !important;
+}
+
+.history-actions,
+.history-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.history-heading {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 0.8rem;
+}
+
+.history-heading span {
+  background: #FFF4BD;
+  border-radius: 999px;
+  color: #5B3A29;
+  font-weight: 900;
+  padding: 0.25rem 0.65rem;
+}
+
+.history-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.history-empty {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.25rem !important;
+}
+
+.history-delete {
+  background: #FFE5EC;
+  border: 0;
+  border-radius: 999px;
+  color: #7A2D3E;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 0.65rem 1rem;
+}
+
 @media (max-width: 768px) {
   html,
   body,
@@ -436,5 +622,62 @@
 
   .planner-page .nav-btn {
     white-space: normal !important;
+  }
+
+  .rabbit-extra-header,
+  .history-hero,
+  .history-hero > div,
+  .history-save-card,
+  .backup-card,
+  .history-item {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rabbit-extra-header,
+  .history-hero {
+    padding: 1rem;
+  }
+
+  .rabbit-extra-header > div {
+    align-items: flex-start;
+  }
+
+  .rabbit-extra-shell {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 1rem;
+  }
+
+  .rabbit-extra-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rabbit-extra-menu input,
+  .rabbit-extra-form-grid {
+    grid-column: 1 / -1;
+  }
+
+  .rabbit-extra-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .planner-bottom-nav,
+  .history-actions,
+  .history-item-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .planner-bottom-nav .nav-btn,
+  .history-actions .nav-btn,
+  .history-item-actions .nav-btn,
+  .history-delete {
+    width: 100%;
+  }
+
+  .history-content {
+    padding: 0 1rem;
   }
 }

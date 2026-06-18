@@ -207,9 +207,9 @@ export default function Notas() {
             </div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="planner-bottom-nav">
             <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/projetos")}>← Projetos</button>
-            <button className="nav-btn" onClick={() => navigate("/")}>🏠 Voltar ao Início</button>
+            <button className="nav-btn" onClick={() => navigate("/extras")}>Páginas Extras →</button>
           </div>
         </div>
       </div>

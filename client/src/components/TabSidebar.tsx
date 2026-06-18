@@ -1,5 +1,5 @@
 import { useLocation } from "wouter";
-import { BookOpen, CalendarDays, CalendarRange, CircleDollarSign, CloudSun, FolderKanban, Heart, Home, Lightbulb, ListChecks, NotebookPen, Sparkles, Target } from "lucide-react";
+import { BookOpen, CalendarDays, CalendarRange, CircleDollarSign, CloudSun, FolderKanban, Heart, History, Home, LayoutGrid, Lightbulb, ListChecks, NotebookPen, Sparkles, Target } from "lucide-react";
 
 const tabs = [
   { label: "Início", icon: Home, path: "/", color: "#FF8BA7" },
@@ -15,6 +15,8 @@ const tabs = [
   { label: "Aulas", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
   { label: "Projetos", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
   { label: "Ideias", icon: Lightbulb, path: "/notas", color: "#FFC2D1" },
+  { label: "Extras", icon: LayoutGrid, path: "/extras", color: "#FFF4BD" },
+  { label: "Histórico", icon: History, path: "/historico", color: "#E8D5C0" },
 ];
 
 export default function TabSidebar() {

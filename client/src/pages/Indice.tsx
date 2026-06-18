@@ -118,6 +118,24 @@ const sections = [
     textColor: "#7A4A55",
     borderColor: "#FF9AA2",
   },
+  {
+    title: "Páginas Extras",
+    emoji: "✨",
+    desc: "Listas especiais, memórias, favoritos, viagens e espaços flexíveis",
+    path: "/extras",
+    color: "#FFF4BD",
+    textColor: "#594A4E",
+    borderColor: "#FFD1DC",
+  },
+  {
+    title: "Histórico & Backup",
+    emoji: "💾",
+    desc: "Salve períodos, restaure versões anteriores e exporte seus dados",
+    path: "/historico",
+    color: "#E8D5C0",
+    textColor: "#5B3A29",
+    borderColor: "#D4B896",
+  },
 ];
 
 export default function Indice() {
