@@ -118,6 +118,24 @@ const sections = [
     textColor: "#7A2D3E",
     borderColor: "#E8899A",
   },
+  {
+    title: "Extra Pages",
+    emoji: "✨",
+    desc: "Special lists, memories, favorites, travel notes, and flexible spaces",
+    path: "/extras",
+    color: "#FFF4BD",
+    textColor: "#594A4E",
+    borderColor: "#FFD1DC",
+  },
+  {
+    title: "History & Backup",
+    emoji: "💾",
+    desc: "Save periods, restore older versions, and export your data",
+    path: "/history",
+    color: "#E8D5C0",
+    textColor: "#5B3A29",
+    borderColor: "#D4B896",
+  },
 ];
 
 export default function Indice() {

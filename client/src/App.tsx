@@ -20,6 +20,8 @@ import PlannerAcademico from "./pages/PlannerAcademico_fixed";
 import AnotacoesClassNotes from "./pages/AnotacoesAulas";
 import Projects from "./pages/Projetos_fixed";
 import Notes from "./pages/Notas";
+import Extras from "./pages/Extras";
+import History from "./pages/History";
 
 function Router() {
   return (
@@ -42,6 +44,8 @@ function Router() {
       <Route path="/notes" component={Notes} />
       <Route path="/ideas" component={Notes} />
       <Route path="/notas" component={Notes} />
+      <Route path="/extras" component={Extras} />
+      <Route path="/history" component={History} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

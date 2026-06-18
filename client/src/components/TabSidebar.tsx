@@ -13,6 +13,8 @@ import {
   NotebookPen,
   FolderKanban,
   Lightbulb,
+  LayoutGrid,
+  History,
 } from "lucide-react";
 
 export const tabs = [
@@ -29,6 +31,8 @@ export const tabs = [
   { label: "Classes", icon: NotebookPen, path: "/anotacoes-aulas", color: "#FFF4BD" },
   { label: "Projects", icon: FolderKanban, path: "/projetos", color: "#C3F0CA" },
   { label: "Ideas", icon: Lightbulb, path: "/notas", color: "#FFC2D1" },
+  { label: "Extras", icon: LayoutGrid, path: "/extras", color: "#FFF4BD" },
+  { label: "Backup", icon: History, path: "/history", color: "#E8D5C0" },
 ];
 
 export default function TabSidebar() {
