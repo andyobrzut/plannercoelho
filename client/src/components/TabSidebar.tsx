@@ -1,17 +1,18 @@
-import { useLocation } from "wouter"; 
-  Home, 
-  CalendarRange, 
-  CalendarDays, 
-  ListChecks, 
-  CloudSun, 
-  Target, 
-  Sparkles, 
-  CircleDollarSign, 
-  Heart, 
-  BookOpen, 
-  NotebookPen, 
-  FolderKanban, 
-  Lightbulb 
+import { useLocation } from "wouter";
+import {
+  Home,
+  CalendarRange,
+  CalendarDays,
+  ListChecks,
+  CloudSun,
+  Target,
+  Sparkles,
+  CircleDollarSign,
+  Heart,
+  BookOpen,
+  NotebookPen,
+  FolderKanban,
+  Lightbulb,
 } from "lucide-react";
 
 export const tabs = [
