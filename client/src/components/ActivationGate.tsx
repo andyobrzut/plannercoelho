@@ -2,12 +2,12 @@ import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { activateLicense, activationIsConfigured, verifyActivation } from "@/lib/activation";
 
 const messages: Record<string, string> = {
-  invalid_code: "Código inválido. Confira a mensagem recebida após sua compra.",
-  expired_code: "Este código expirou. Entre em contato com a loja.",
-  disabled_code: "Este código foi desativado. Entre em contato com a loja.",
-  device_limit: "Este código já atingiu o limite de dispositivos.",
-  connection_error: "Não foi possível validar agora. Verifique sua conexão e tente novamente.",
-  missing_configuration: "A ativação ainda não foi configurada neste aplicativo.",
+  invalid_code: "Invalid code. Please check the code you received after purchase.",
+  expired_code: "This code has expired. Please contact the shop.",
+  disabled_code: "This code has been disabled. Please contact the shop.",
+  device_limit: "This code has already reached the device limit.",
+  connection_error: "We could not validate the code right now. Check your connection and try again.",
+  missing_configuration: "Activation is not configured for this app yet.",
 };
 
 export default function ActivationGate({ children }: { children: ReactNode }) {
@@ -41,7 +41,7 @@ export default function ActivationGate({ children }: { children: ReactNode }) {
       setStatus("unlocked");
       return;
     }
-    setMessage(messages[result.reason || ""] || "Não foi possível ativar este código.");
+    setMessage(messages[result.reason || ""] || "We could not activate this code.");
   };
 
   if (status === "unlocked") return children;
@@ -52,11 +52,11 @@ export default function ActivationGate({ children }: { children: ReactNode }) {
         <div className="activation-art" aria-hidden="true" />
         <div className="activation-content">
           <span className="activation-badge">RABBIT PLANNER</span>
-          <h1>{status === "checking" ? "Verificando acesso..." : "Ative seu planner"}</h1>
-          <p>Digite o código enviado pela loja após sua compra para liberar este dispositivo.</p>
+          <h1>{status === "checking" ? "Checking access..." : "Activate your planner"}</h1>
+          <p>Enter the code sent by the shop after purchase to unlock this device.</p>
           {status === "locked" && (
             <form onSubmit={submit}>
-              <label htmlFor="activation-code">Código de acesso</label>
+              <label htmlFor="activation-code">Access code</label>
               <input
                 id="activation-code"
                 value={code}
@@ -65,11 +65,11 @@ export default function ActivationGate({ children }: { children: ReactNode }) {
                 autoComplete="one-time-code"
                 maxLength={40}
               />
-              <button type="submit" disabled={loading}>{loading ? "Validando..." : "Ativar planner"}</button>
+              <button type="submit" disabled={loading}>{loading ? "Validating..." : "Activate planner"}</button>
             </form>
           )}
           {message && <p className="activation-message">{message}</p>}
-          <small>O código é solicitado somente na primeira ativação deste dispositivo.</small>
+          <small>The code is requested only on the first activation of this device.</small>
         </div>
       </section>
     </main>
