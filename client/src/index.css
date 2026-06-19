@@ -1,9 +1,9 @@
-/* =============================================================
+﻿/* =============================================================
    DIGITAL KAWAII RABBIT PLANNER
    Design: contemporary Japanese kawaii rabbit stationery
    Palette: paper cream, caramel, sage green, tea rose,
            Azul lagoa, Amarelo manteiga, Marrom cacau
-   Tipografia: Nunito (ExtraBold títulos, Regular corpo)
+   Tipografia: Nunito (ExtraBold tÃ­tulos, Regular corpo)
    ============================================================= */
 
 @import "tailwindcss";
@@ -345,7 +345,7 @@
     .tab-sidebar { display: none !important; }
   }
 }
-/* --- FORÇAR RESPONSIVIDADE EM TODOS OS PLANNERS (BASE IGUAL) --- */
+/* --- FORÃ‡AR RESPONSIVIDADE EM TODOS OS PLANNERS (BASE IGUAL) --- */
 @media (max-width: 768px) {
   /* Aplica-se a qualquer div que tenha maxWidth ou max-width igual a 1000 */
   div[style*="maxWidth: 1000"],
@@ -358,14 +358,14 @@
     display: flex !important;
   }
 
-  /* Força todas as barras laterais de largura 200 a ficarem a 100% no telemóvel */
+  /* ForÃ§a todas as barras laterais de largura 200 a ficarem a 100% no telemÃ³vel */
   div[style*="width: 200"],
   div[style*="width:200"] {
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  /* Força a área de conteúdo da direita (último filho) a ficar a 100% */
+  /* ForÃ§a a Ã¡rea de conteÃºdo da direita (Ãºltimo filho) a ficar a 100% */
   div[style*="1000"] > div:last-child {
     width: 100% !important;
     max-width: 100% !important;
@@ -635,3 +635,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* codex-activation-banner-start */
+.activation-page,.admin-page{min-height:100vh!important;padding:2rem!important;display:grid!important;place-items:center!important;background:#fff8ed!important;}
+.activation-panel,.admin-shell{width:min(980px,100%)!important;border:2px solid #dfd4c7!important;border-radius:24px!important;background:#fffdf8!important;box-shadow:0 24px 60px rgba(42,32,22,.16)!important;overflow:hidden!important;}
+.activation-panel{display:grid!important;grid-template-columns:minmax(260px,.95fr) minmax(310px,1fr)!important;}
+.activation-art{display:block!important;min-height:430px!important;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.08)), url("/assets/kawaii/kawaii_banner.png") center/cover no-repeat!important;}
+.activation-content,.admin-card{padding:2.25rem!important;}
+.activation-badge{display:inline-flex!important;border-radius:999px!important;background:#eaf7e4!important;color:#4d6a43!important;padding:.3rem .9rem!important;font:900 .75rem Nunito,sans-serif!important;letter-spacing:.08em!important;}
+.activation-content h1,.admin-page h1{margin:.85rem 0 .55rem!important;color:#4d6a43!important;font:900 clamp(1.8rem,4vw,2.45rem) Nunito,sans-serif!important;line-height:1.05!important;}
+.activation-content p,.activation-content small,.admin-page p{color:#7b6f55!important;font-weight:700!important;line-height:1.55!important;}
+.activation-content form,.admin-card,.admin-form{display:grid!important;gap:.9rem!important;margin-top:1rem!important;}
+.activation-content label,.admin-card label{display:grid!important;gap:.35rem!important;color:#4d6a43!important;font-weight:900!important;}
+.activation-content input,.admin-card input{width:100%!important;border:2px solid #dfd4c7!important;border-radius:14px!important;background:#fff8ed!important;color:#4d6a43!important;padding:.85rem .95rem!important;font:900 1rem Nunito,sans-serif!important;}
+.activation-content button,.admin-card button{width:100%!important;border:0!important;border-radius:14px!important;background:#8ebc8b!important;color:#fffaf4!important;padding:.9rem 1rem!important;cursor:pointer!important;font:900 1rem Nunito,sans-serif!important;}
+.activation-message,.admin-message{border-radius:14px!important;padding:.85rem!important;background:#eaf7e4!important;color:#4d6a43!important;}
+@media(max-width:760px){.activation-page,.admin-page{padding:1rem!important;}.activation-panel{grid-template-columns:1fr!important;}.activation-art{min-height:190px!important;}.activation-content,.admin-card{padding:1.25rem!important;}.activation-content h1,.admin-page h1{font-size:1.85rem!important;}}
+/* codex-activation-banner-end */
+
