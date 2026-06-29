@@ -35,7 +35,7 @@ export default function PlannerDiario() {
       <TabSidebar />
 
       {/* Header */}
-      <div style={{ background: "#F4B7C3", borderBottom: "3px solid #E8899A", padding: "1.25rem 2rem" }}>
+      <div className="planner-page-header" style={{ background: "#F4B7C3", borderBottom: "3px solid #E8899A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <img src={CAPIVARA_CAPA} alt="Bunny studying" style={{ width: 60, height: 60, objectFit: "contain" }} />
@@ -50,10 +50,10 @@ export default function PlannerDiario() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 900, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+      <div className="planner-content" style={{ maxWidth: 900, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
 
         {/* Date e humor */}
-        <div className="planner-card" style={{ padding: "1.25rem", display: "flex", gap: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
+        <div className="planner-card day-intro-row" style={{ padding: "1.25rem", display: "flex", gap: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
           <div>
             <div className="field-label" style={{ marginBottom: "0.3rem" }}>📅 Date</div>
             <input
@@ -65,7 +65,7 @@ export default function PlannerDiario() {
           </div>
           <div>
             <div className="field-label" style={{ marginBottom: "0.5rem" }}>How am I feeling today?</div>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
+            <div className="day-mood-row" style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
               {humores.map((h, i) => (
                 <button
                   key={i}
@@ -91,7 +91,7 @@ export default function PlannerDiario() {
         </div>
 
         {/* Priority + Tasks + Schedule */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "1.25rem" }}>
+        <div className="day-main-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "1.25rem" }}>
           {/* Priority e tarefas */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <div className="planner-card" style={{ padding: "1rem" }}>
@@ -170,7 +170,7 @@ export default function PlannerDiario() {
         </div>
 
         {/* Gratitude and reflection */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+        <div className="day-reflection-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
           <div className="planner-card" style={{ padding: "1.25rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
               <div style={{ width: 4, height: 22, background: "#F4B7C3", borderRadius: 4 }} />
@@ -217,7 +217,7 @@ export default function PlannerDiario() {
         </div>
 
         {/* Navigation */}
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="planner-subnav" style={{ display: "flex", justifyContent: "space-between" }}>
           <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/planner-semanal")}>
             ← Weekly Planner
           </button>

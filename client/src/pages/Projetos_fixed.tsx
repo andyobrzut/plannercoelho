@@ -106,7 +106,7 @@ export default function Projects() {
     <div className="planner-page" style={{ minHeight: "100vh", background: "#FFF7EA" }}>
       <TabSidebar />
 
-      <div style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
+      <div className="planner-page-header" style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <img src={CAPIVARA_NOTAS} alt="Bunny projects" style={{ width: 60, height: 60, objectFit: "contain" }} />
@@ -119,10 +119,10 @@ export default function Projects() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1000, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", gap: "1.25rem" }}>
+      <div className="planner-content projects-layout" style={{ maxWidth: 1000, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", gap: "1.25rem" }}>
 
-        {/* Lista de projetos */}
-        <div style={{ width: 220, flexShrink: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        {/* Project list */}
+        <div className="projects-sidebar" style={{ width: 220, flexShrink: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           <div className="field-label" style={{ marginBottom: "0.25rem" }}>Projects</div>
           {projetos.map((proj, i) => (
             <div key={i} style={{ position: "relative", display: "flex", gap: "0.3rem" }}>
@@ -158,11 +158,11 @@ export default function Projects() {
           </button>
         </div>
 
-        {/* Detalhes do projeto */}
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {/* Info do projeto */}
+        {/* Project details */}
+        <div className="projects-detail" style={{ flex: 1, display: "flex", flexDirection: "column", gap: "1rem", minWidth: 0 }}>
+          {/* Project info */}
           <div className="planner-card" style={{ padding: "1.25rem" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 120px 100px 100px", gap: "0.75rem", marginBottom: "0.75rem" }}>
+            <div className="projects-meta-grid" style={{ display: "grid", gridTemplateColumns: "1fr 120px 100px 100px", gap: "0.75rem", marginBottom: "0.75rem" }}>
               <div>
                 <div className="field-label" style={{ marginBottom: "0.3rem" }}>🚀 Project Name</div>
                 <input value={p.nome} onChange={e => updateProject("nome", e.target.value)} placeholder="Name do projeto..." style={{ width: "100%", border: "2px solid #E8D5C0", borderRadius: "0.6rem", padding: "0.4rem 0.6rem", fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: "0.9rem", color: "#5B3A29", background: "#FFFBF3", outline: "none" }} />
@@ -208,7 +208,7 @@ export default function Projects() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {p.etapas.map((e, ei) => (
-                <div key={ei} style={{ display: "flex", gap: "0.75rem", alignItems: "center", padding: "0.6rem 0.75rem", background: statusConfig[e.status].bg, borderRadius: "0.75rem", border: "1.5px solid #E8D5C0" }}>
+                <div key={ei} className="project-step-row" style={{ display: "flex", gap: "0.75rem", alignItems: "center", padding: "0.6rem 0.75rem", background: statusConfig[e.status].bg, borderRadius: "0.75rem", border: "1.5px solid #E8D5C0" }}>
                   <div style={{ fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: "0.75rem", color: "#8B6347", minWidth: 20 }}>{ei + 1}.</div>
                   <input value={e.titulo} onChange={ev => updateStep(ei, "titulo", ev.target.value)} placeholder="Descreva a etapa..." style={{ flex: 1, border: "none", borderBottom: "1.5px dotted #D4B896", fontFamily: "'Nunito',sans-serif", fontWeight: 600, fontSize: "0.85rem", color: "#5B3A29", background: "transparent", outline: "none", padding: "0.2rem 0" }} />
                   <input value={e.prazo} onChange={ev => updateStep(ei, "prazo", ev.target.value)} placeholder="MM/DD" style={{ width: 60, border: "2px solid #E8D5C0", borderRadius: "0.4rem", fontFamily: "'Nunito',sans-serif", fontWeight: 700, fontSize: "0.75rem", color: "#5B3A29", background: "#FFFBF3", outline: "none", padding: "0.2rem 0.4rem", textAlign: "center" }} />
@@ -223,7 +223,7 @@ export default function Projects() {
             </div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="planner-subnav" style={{ display: "flex", justifyContent: "space-between" }}>
             <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/anotacoes-aulas")}>← Class Notes</button>
             <button className="nav-btn" onClick={() => navigate("/notes")}>Free Notes →</button>
           </div>

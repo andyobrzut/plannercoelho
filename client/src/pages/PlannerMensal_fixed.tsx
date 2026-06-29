@@ -95,7 +95,7 @@ export default function PlannerMensal() {
       <TabSidebar />
 
       {/* Header */}
-      <div style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
+      <div className="planner-page-header" style={{ background: "#BFD8B8", borderBottom: "3px solid #7BA87A", padding: "1.25rem 2rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <img src={CAPIVARA_CALENDARIO} alt="Bunny calendar" style={{ width: 60, height: 60, objectFit: "contain" }} />
@@ -110,7 +110,7 @@ export default function PlannerMensal() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 900, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+      <div className="planner-content" style={{ maxWidth: 900, margin: "1.5rem auto 2rem", padding: "0 1.5rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
 
         {/* Monthly Focus */}
         <div className="planner-card" style={{ padding: "1.25rem", display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
@@ -146,7 +146,7 @@ export default function PlannerMensal() {
         </div>
 
         {/* Calendar + lateral */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: "1.25rem" }}>
+        <div className="month-layout-grid" style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: "1.25rem" }}>
           {/* Calendar */}
           <div className="planner-card" style={{ padding: "1.25rem" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
@@ -154,7 +154,8 @@ export default function PlannerMensal() {
               <h2 className="section-title" style={{ fontSize: "1.2rem" }}>{meses[mesAtual]} {anoAtual}</h2>
               <button onClick={() => mudarMes(1)} style={{ background: "#F5EDE0", border: "2px solid #E8D5C0", borderRadius: "0.6rem", padding: "0.3rem 0.7rem", fontWeight: 700, color: "#5B3A29", cursor: "pointer" }}>›</button>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 4 }}>
+            <div className="month-calendar-scroll">
+            <div className="month-calendar-grid" style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 4 }}>
               {diasSemana.map((d, i) => (
                 <div key={i} style={{ textAlign: "center", fontSize: "0.72rem", fontWeight: 800, color: "#A96F45", padding: "4px 0" }}>{d}</div>
               ))}
@@ -193,10 +194,11 @@ export default function PlannerMensal() {
                 </div>
               ))}
             </div>
+            </div>
           </div>
 
-          {/* Lateral: goals, prioridades, provas */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          {/* Sidebar: goals, priorities, exams */}
+          <div className="month-sidebar" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {/* Monthly Goals */}
             <div className="planner-card" style={{ padding: "1rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
@@ -244,7 +246,7 @@ export default function PlannerMensal() {
                 <button onClick={addProva} style={addBtnStyle}>+</button>
               </div>
               {provas.map((p, i) => (
-                <div key={i} style={{ display: "flex", gap: "0.3rem", marginBottom: "0.4rem", alignItems: "center" }}>
+                <div key={i} className="month-exam-row" style={{ display: "flex", gap: "0.3rem", marginBottom: "0.4rem", alignItems: "center" }}>
                   <input
                     value={p.data}
                     onChange={e => { const n=[...provas]; n[i]={...n[i],data:e.target.value}; setExams(n); }}
@@ -302,7 +304,7 @@ export default function PlannerMensal() {
         </div>
 
         {/* Navigation */}
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="planner-subnav" style={{ display: "flex", justifyContent: "space-between" }}>
           <button className="nav-btn nav-btn-outline" style={{ color: "#5B3A29", borderColor: "#5B3A29" }} onClick={() => navigate("/planner-anual")}>
             ← Yearly Overview
           </button>

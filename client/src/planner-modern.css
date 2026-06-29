@@ -191,6 +191,205 @@ body { font-size: 16px; }
 }
 
 
+/* Month, Day, Projects — dedicated layouts */
+.planner-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.month-layout-grid { align-items: start; }
+.month-calendar-scroll {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.month-calendar-grid { width: 100%; }
+.month-calendar-grid > div[style*="minHeight: 52"],
+.month-calendar-grid > div[style*="min-height: 52"] {
+  min-height: 52px;
+}
+.month-calendar-grid textarea {
+  min-width: 0;
+}
+
+.projects-layout { align-items: flex-start; }
+.projects-detail { min-width: 0; }
+
+@media (max-width: 720px) {
+  .planner-content {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .planner-page-header > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+  }
+  .planner-page-header .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .planner-page-header img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  .planner-page-header .section-title {
+    font-size: 1.35rem !important;
+  }
+
+  .month-layout-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .month-sidebar {
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .day-main-grid,
+  .day-reflection-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .day-intro-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+  .day-mood-row {
+    justify-content: flex-start;
+  }
+  .day-mood-row .mood-btn {
+    flex: 0 0 auto;
+  }
+
+  .projects-layout {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  .projects-sidebar {
+    width: 100% !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    scrollbar-gutter: stable;
+  }
+  .projects-sidebar > .field-label {
+    display: none;
+  }
+  .projects-sidebar > div[style*="position: relative"] {
+    min-width: 168px;
+    flex: 0 0 auto;
+  }
+  .projects-sidebar > .nav-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    align-self: stretch;
+  }
+
+  .projects-meta-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .projects-meta-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .project-step-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.55rem !important;
+  }
+  .project-step-row input[placeholder="MM/DD"],
+  .project-step-row select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .project-step-row > div:first-child {
+    min-width: 0 !important;
+  }
+  .project-step-row > button:last-child {
+    align-self: flex-end;
+  }
+
+  .month-exam-row {
+    flex-wrap: wrap;
+  }
+  .month-exam-row input[placeholder="MM/DD"] {
+    width: 72px !important;
+    flex: 0 0 72px;
+  }
+  .month-exam-row input[placeholder="Description..."] {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+
+  .planner-subnav {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+  }
+  .planner-subnav .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .month-calendar-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    scrollbar-gutter: stable;
+  }
+  .month-calendar-grid {
+    min-width: 560px;
+    gap: 6px !important;
+  }
+  .month-calendar-grid > div[style*="textAlign: center"] {
+    font-size: 0.78rem !important;
+    padding: 6px 0 !important;
+  }
+  .month-calendar-grid > div[style*="minHeight: 52"],
+  .month-calendar-grid > div[style*="min-height: 52"] {
+    min-height: 68px !important;
+    padding: 4px 6px !important;
+  }
+  .month-calendar-grid textarea {
+    font-size: 0.72rem !important;
+    min-height: 36px !important;
+  }
+
+  .projects-meta-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .projects-meta-grid > div:first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .month-calendar-grid {
+    min-width: 520px;
+  }
+  .day-mood-row .mood-btn {
+    width: 2.35rem !important;
+    height: 2.35rem !important;
+    font-size: 1.15rem !important;
+  }
+}
+
+
 /* Seven-day weekly view: readable on desktop and horizontally scrollable on smaller screens. */
 .weekly-content { max-width: 1500px !important; }
 .weekly-days-scroll {
