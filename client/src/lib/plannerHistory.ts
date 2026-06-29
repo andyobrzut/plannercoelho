@@ -8,7 +8,7 @@ export type PlannerPeriod = {
 };
 
 type PlannerBackup = {
-  product: "rabbit-planner-pt";
+  product: "coelho-planner-pt";
   version: 1;
   exportedAt: string;
   data: Record<string, string>;
@@ -64,7 +64,7 @@ export function deletePlannerPeriod(id: string): PlannerPeriod[] {
 
 export function downloadPlannerBackup() {
   const backup: PlannerBackup = {
-    product: "rabbit-planner-pt",
+    product: "coelho-planner-pt",
     version: 1,
     exportedAt: new Date().toISOString(),
     data: capturePlannerData(true),
@@ -82,7 +82,7 @@ export function downloadPlannerBackup() {
 export async function importPlannerBackup(file: File) {
   const backup = JSON.parse(await file.text()) as Partial<PlannerBackup>;
   if (
-    backup.product !== "rabbit-planner-pt" ||
+    (backup.product !== "coelho-planner-pt" && backup.product !== "rabbit-planner-pt") ||
     backup.version !== 1 ||
     !backup.data ||
     typeof backup.data !== "object"
