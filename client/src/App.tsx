@@ -62,7 +62,9 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <ActivationGate>
-            <Router />
+            <div className="rabbit-planner-app">
+              <Router />
+            </div>
           </ActivationGate>
         </TooltipProvider>
       </ThemeProvider>
